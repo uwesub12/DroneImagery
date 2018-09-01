@@ -32,24 +32,26 @@
         text-transform: uppercase;
         z-index:1;
       }
-
         .logo {
         position: absolute;
+        right: 0;
         right: 0;
         bottom: 0;
         height: 100%;
       }
 
-      #map { position:absolute; top:0; bottom:0; width:100%; z-index:-1;}
+      #map { position:absolute; top:0; bottom:0; width:100%; }
 
 
     </style>
+        .logo {
+        position: absolute;
 </head>
 
 <body class="prose">
     <header class="bg-darken75 color-white h-auto-mm h60">
       <div class='flex-parent flex-parent--space-between-main w-full'>
-        <div class="flex-child ml240 mt24 mb12"><h3>ZMI imagery slider</h3></div>
+        <div class="flex-child ml240 mt24 mb12"><h3 style=" text-align: center;">Stone Town after ZMI</h3></div>
       </div>
     </header>
     <footer>
@@ -88,18 +90,18 @@ body * {
 <div id='after' class='map'></div>
 
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoibWFyZW5hYiIsImEiOiJjajV2ajVyZXUwMnN3MzNwNzR3Ynk2cjIyIn0.sI-ynx23EEdpZFbEDu6qjA';
+mapboxgl.accessToken = 'pk.eyJ1IjoidXdlc3ViMTIiLCJhIjoiY2prdHJtdHIzMDgxajNrcDN6MmI3aGVpcCJ9.Noqlnd-SYDYrRPZC03TQgg';
 
 // Set bounds
-   var bounds = [
-    [39.2013,-6.1519], // Northeast coordinates
-    [39.2120,-6.1885]    // Southwest coordinates 
+    var bounds = [
+    [39.201321601867676,-6.151904646442697], // Northeast coordinates
+    [39.21200752258301,-6.188598034935861]    // Southwest coordinates 
     ];
 
 var beforeMap = new mapboxgl.Map({
     container: 'before',
     style: 'mapbox://styles/mapbox/satellite-v9',
-    center: [39.1881,-6.1628],
+    center: [39.188157320022576,-6.1628489286506465],
     zoom: 9,
     maxBounds: bounds
 });
@@ -107,7 +109,7 @@ var beforeMap = new mapboxgl.Map({
 var afterMap = new mapboxgl.Map({
     container: 'after',
     style: 'mapbox://styles/pratikyadav/cjldke8fv3c3r2row6hvk5k7z',
-    center: [39.1881,-6.1628],
+    center: [39.188157320022576,-6.1628489286506465],
     zoom: 9,
     maxBounds: bounds
 });
