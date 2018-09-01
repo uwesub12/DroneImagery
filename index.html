@@ -91,24 +91,24 @@ body * {
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFyZW5hYiIsImEiOiJjajV2ajVyZXUwMnN3MzNwNzR3Ynk2cjIyIn0.sI-ynx23EEdpZFbEDu6qjA';
 
 // Set bounds
-    var bounds = [
-    [39.368,-6.101], // Southwest coordinates
-    [39.464,-6.000]  // Northeast coordinates
+   var bounds = [
+    [39.2013,-6.1519], // Northeast coordinates
+    [39.2120,-6.1885]    // Southwest coordinates 
     ];
 
 var beforeMap = new mapboxgl.Map({
     container: 'before',
     style: 'mapbox://styles/mapbox/satellite-v9',
-    center: [39.418, -6.041],
-    zoom: 13,
+    center: [39.1881,-6.1628],
+    zoom: 9,
     maxBounds: bounds
 });
 
 var afterMap = new mapboxgl.Map({
     container: 'after',
-    style: 'mapbox://styles/marenab/cjksyzy7l00ju2sphshj9t2u9',
-    center: [39.418, -6.041],
-    zoom: 13,
+    style: 'mapbox://styles/pratikyadav/cjldke8fv3c3r2row6hvk5k7z',
+    center: [39.1881,-6.1628],
+    zoom: 9,
     maxBounds: bounds
 });
 
