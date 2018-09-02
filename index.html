@@ -2,17 +2,15 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Drone image comparison</title>
+    <title>Drone Image</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
     <link href="https://api.mapbox.com/mapbox-assembly/v0.21.0/assembly.min.css" rel="stylesheet">
     <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.21.0/assembly.js"></script>
-
     <style>
         body { margin:0; padding:0; }
-
-        header {
+         header {
         position: absolute;
         display: block;
         top: 0;
@@ -32,26 +30,23 @@
         text-transform: uppercase;
         z-index:1;
       }
+
         .logo {
         position: absolute;
-        right: 0;
         right: 0;
         bottom: 0;
         height: 100%;
       }
+    
 
-      #map { position:absolute; top:0; bottom:0; width:100%; }
-
-
+        #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
-        .logo {
-        position: absolute;
 </head>
 
 <body class="prose">
     <header class="bg-darken75 color-white h-auto-mm h60">
       <div class='flex-parent flex-parent--space-between-main w-full'>
-        <div class="flex-child ml240 mt24 mb12"><h3 style=" text-align: center;">Stone Town after ZMI</h3></div>
+        <div class="flex-child ml240 mt24 mb12"><h3>Stone Town After ZMI</h3></div>
       </div>
     </header>
     <footer>
@@ -60,6 +55,8 @@
         <div class="flex-child ml240 mt24 mb12"></div>
       </div>
     </footer>
+
+<body>
 
 <style>
 body {
@@ -80,51 +77,46 @@ body * {
     bottom: 0;
     width: 100%;
 }
-
-
 </style>
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css' type='text/css' />
 
 <div id='before' class='map'></div>
 <div id='after' class='map'></div>
-
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoidXdlc3ViMTIiLCJhIjoiY2prdHJtdHIzMDgxajNrcDN6MmI3aGVpcCJ9.Noqlnd-SYDYrRPZC03TQgg';
 
-// Set bounds
-    var bounds = [
-    [39.28985595703125,-5.7307771834078745], // Northeast coordinates
-    [39.49859619140625,-6.44358852539394]    // Southwest coordinates 
-    ];
+   // var bounds = [
+     //   [39.233551025390625,-6.110514878562125], // Southwest coordinates
+      //  [39.244537353515625,-6.240220461451296]  // Northeast coordinates
+      //  ];
+
 
 var beforeMap = new mapboxgl.Map({
     container: 'before',
-    style: 'mapbox://styles/mapbox/satellite-v9',
-    center: [39.188157320022576,-6.1628489286506465],
-    zoom: 9,
-    maxBounds: bounds
+    style: 'mapbox://styles/uwesub12/cjlk071jp2wfv2sqtg12ukb1k',
+    center: [39.19089317321777,-6.162656925643793],
+    zoom: 13
+    //maxBounds: bounds
 });
 
 var afterMap = new mapboxgl.Map({
     container: 'after',
     style: 'mapbox://styles/pratikyadav/cjldke8fv3c3r2row6hvk5k7z',
-    center: [39.188157320022576,-6.1628489286506465],
-    zoom: 9,
-    maxBounds: bounds
+    center: [39.19089317321777,-6.162656925643793],
+    zoom: 13
+   // maxBounds: bounds
 });
 
 var map = new mapboxgl.Compare(beforeMap, afterMap, {
     // Set this to enable comparing two maps by mouse movement:
     // mousemove: true
 });
-
-// Add zoom and rotation controls to the map.
+    //Add zoom and rotation controls to the map.
 beforeMap.addControl(new mapboxgl.NavigationControl());
-//var nav = new mapboxgl.NavigationControl();
-  //beforeMap.addControl(nav, 'bottom-right');
 
 </script>
 
 </body>
 </html>
+
